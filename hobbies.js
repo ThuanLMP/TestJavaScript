@@ -1,11 +1,13 @@
 function findAllHobbyists(hobby, hobbies) {
     const result = [];
-    for(let key in hobbies){
-        hobbies[key].map((a) => {
-            if(a===hobby){
+    for (let key in hobbies) {
+        for (let value of hobbies[key]) {
+            if (value === hobby) {
                 result.push(key);
             }
-        })
+        }
+
+
     }
     return result;
 
